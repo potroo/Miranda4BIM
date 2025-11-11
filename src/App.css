@@ -1,42 +1,76 @@
+
+/* Página estática e limpa */
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* Container fixo no topo */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  background: #000;
+  border-radius: 10px;
   padding: 2rem;
-  text-align: center;
+  color: #fff;
 }
 
+/* Logo */
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  display: block;
+  height: 80px;
+  margin-bottom: 1.5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Formulário */
+form {
+  display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Labels e Inputs */
+label {
+  display: block;
+  font-weight: 600;
+  color: #ccc;
+  margin: 1rem 0 0.3rem;
 }
 
-.card {
-  padding: 2em;
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #fff;
+  color: #000;
+  font-size: 1rem;
 }
 
+/* Botão */
+button {
+  display: block;
+  width: 100%;
+  background: #646cff;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+/* Rodapé */
 .read-the-docs {
+  margin-top: 1.5rem;
   color: #888;
+  text-align: center;
+  font-size: 0.9rem;
 }
