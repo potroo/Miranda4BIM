@@ -1,23 +1,75 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 
+function App () {
+
+  const [from, setform] = useState({
+      name: " ",
+      age: 30,
+      phone: " ",
+      instagram: " ",
+      github: " ",
+      thought: " ",
+      problem: " ",
+      lastSeries: " ",
+      lastGame: " ",
+      music: " ",
+      genre: " ",
+      specialSkill: " ",
+      specialPower: " ",
+      favoriteTeam: " ",
+      bibleVerse: " ",
+      email: " ",
+      password: " "
+    }
+  })
+}
 function FormularioPerfil() {
-  const [formData, setFormData] = useState({
-    nome: "",
-    idade: "",
-    telefone: "",
-    instagram: "",
-    github: "",
-    pensamento: "",
-    probleminha: "",
-    ultimaSerie: "",
-    ultimoJogo: "",
-    musica: "",
-    genero: "",
-    habilidadeEspecial: "",
-    poderEspecial: "",
-    timeTorce: ""
-  });
+  const [name, setName] = useState('')
+  const[password, setPassword] = useState('')
+
+  const getData = () =>
+  console.log('Entrou')
+  fetch('')
+  fetch(URL,{
+    method:'get',
+    body:JSON.stringify({email, password})
+  })
+  .then(res=>)
+  
+  boby:
+
+  const onSubmitform = () => {
+    console.log(name)
+        const data = {
+          name,
+          password,
+        }
+  }
+  const onSubmitMandle = () =>{
+    const boby
+    name: " ",
+    age: 30,
+    phone: " ",
+    instagram: " ",
+    github: " ",
+    thought: " ",
+    problem: " ",
+    lastSeries: " ",
+    lastGame: " ",
+    music: " ",
+    genre: " ",
+    specialSkill: " ",
+    specialPower: " ",
+    favoriteTeam: " ",
+    bibleVerse: " ",
+    email: " ",
+    password: " "
+  }
+  fetch('https://api.alanleiser.com/user',{
+  method: 'POST',
+  body:JSON.stringify({email, password})
+  })
 
   // Função única para atualizar qualquer campo
   const handleChange = (e) => {
@@ -61,7 +113,19 @@ function FormularioPerfil() {
       <h1>Formulário</h1>
 
       <form onSubmit={handleSubmit} onChange={handleChange}>
-        {/* Campos */}
+
+      <input type="email"
+      onChange={(e)=>setEmail(e.target.value)}
+      placeholder="email"
+      value={email} />
+
+     <input type="text"
+      onChange={(e)=>setEmail(e.target.value)}
+      placeholder="senha"
+      value={password} />  
+
+      <button type="submit">Carregar dados</>
+
         <label htmlFor="nome">Nome:</label>
         <input type="text" id="nome" name="nome" placeholder="Digite seu nome" value={formData.nome} />
 
@@ -105,6 +169,9 @@ function FormularioPerfil() {
         <input type="text" id="timeTorce" name="timeTorce" placeholder="Nome do time" value={formData.timeTorce} />
 
         <button type="submit">Enviar</button>
+
+      
+
       </form>
     </div>
   );
